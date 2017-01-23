@@ -89,7 +89,6 @@ class MakePluginCommand extends DevToolsCommand{
 				$pharPath = $this->getPlugin()->getDataFolder() . DIRECTORY_SEPARATOR . $description->getName() . "_v" . $description->getVersion() . ".phar";
 			}
 
-			$pharPath = $this->getPlugin()->getDataFolder() . DIRECTORY_SEPARATOR . "FolderPluginLoader.phar";
 			if(file_exists($pharPath)){
 				$sender->sendMessage("Phar plugin already exists, overwriting...");
 				@unlink($pharPath);
